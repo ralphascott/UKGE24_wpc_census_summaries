@@ -1,6 +1,6 @@
 # UKGE24_wpc_census_summaries
 
-This repo contains constituency-level Census summaries for the new 2024 Westminster Parliamentary Constituencies, as well as the data and replication code used to produce them.
+This repo contains constituency-level Census summaries for all of the 632 new 2024 Westminster Parliamentary Constituencies in Great Britain, as well as the data and replication code used to produce them.
 
 Measures are derived from available Census tables based on those used previously in the 2019 BES constituency results file (with some hopefully helpful additions for Scotland and Wales): https://www.doi.org/10.48420/20278599
 
