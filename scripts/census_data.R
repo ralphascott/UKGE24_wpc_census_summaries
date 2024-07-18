@@ -40,7 +40,7 @@ popdens21 <- nomis_get_data(id = "NM_2026_1", time = "latest", geography = "TYPE
 census21_nomis <- left_join(left_join(pop21,popdens21),communal21) %>%
   arrange(pcon_name)
 
-# Other measures for E&W at 2019 pcon boundaries from here: https://www.ons.gov.uk/datasets/create
+# Other measures for E&W at 2024 pcon boundaries from here: https://www.ons.gov.uk/datasets/create
 # (for whatever reason Nomis didn't have all measures at these new boundaries)
 
 # create function to format Census data inputs
