@@ -8,6 +8,24 @@ For England and Wales, these are drawn from the Nomis API where possible, and wh
 
 For Scotland (for which there are currently limited measures), these are taken from the Scotland's Census website's custom dataset tool: https://www.scotlandscensus.gov.uk/search-the-census#/location/topics
 
-The file also integrates the notional 2019 General Election results for the new boundaries produced by Colin Rallings and Michael Thrasher: https://downloads.bbc.co.uk/news/nol/shared/spl/xls_spreadsheets/results_spreadsheet.ods
+The file also integrates:
 
-And the notional 2016 EU referendum results for the new boundaries produced by Chris Hanretty: https://docs.google.com/spreadsheets/d/1mtph-ml7CYVoeEUIc1g_IbOvbiZMa_ezRGQlHQoCpF4/edit?gid=341382343#gid=341382343
+1. the 2024 UK General Election results file produced by the House of Commons Library: https://commonslibrary.parliament.uk/research-briefings/cbp-10009/
+
+2. the notional 2019 General Election results for the new boundaries produced by Colin Rallings and Michael Thrasher: https://downloads.bbc.co.uk/news/nol/shared/spl/xls_spreadsheets/results_spreadsheet.ods
+
+3. the notional 2016 EU referendum results for the new boundaries produced by Chris Hanretty: https://docs.google.com/spreadsheets/d/1mtph-ml7CYVoeEUIc1g_IbOvbiZMa_ezRGQlHQoCpF4/edit?gid=341382343#gid=341382343
+
+4. the notional 2014 Scottish independence referendum results for the new boundaries produced by Marta Miori: https://doi.org/10.48420/26340568
+
+## Version history
+
+**Version 1.1**
+
+- Added 2024 results for HoC library file.
+- Added Miori ScotRef notionals.
+- Updated ONS codes for some Scottish constituencies, so that these are now based on those in HoC Library file (thanks to David Jeffrey for the heads up on these).
+
+**Version 1.0**
+
+- Created file, incorporating 2019 notionals, Census summaries and Hanretty EU ref vote estimates at 2024 boundaries.

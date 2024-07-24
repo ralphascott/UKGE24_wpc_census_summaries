@@ -3,25 +3,49 @@ library(here)
 library(tidyverse)
 
 #####
-#Read in cleaned up notionals file
+# Read in cleaned up 2024 results file
+
+results <- read_csv("data/clean_results.csv")
+
+# Read in cleaned up 2019 notionals file
 
 notionals <- read_csv("data/clean_notionals.csv")
 
-#Add Hanretty notional 2016 EU ref results
+combined_file <- left_join(results,notionals) %>%
+  relocate(pano)
+
+summary(combined_file)
+
+# Add Hanretty notional 2016 EU ref results
 
 brexit <- read_csv("data/Hanretty_Brexit_estimates_2024_boundaries.csv")
 
 brexit <- brexit %>%
-  select(ConstituencyName=Constituen,ONSConstID=gss_code,HanrettyLeave=LeavePct,HanrettyRemain=RemainPct) %>%
+  select(ConstituencyName=Constituen,HanrettyLeave=LeavePct,HanrettyRemain=RemainPct) %>%
   mutate(HanrettyLeave = HanrettyLeave*100, HanrettyRemain = HanrettyRemain*100)
 
-combined_file <- left_join(notionals, brexit)
+combined_file <- left_join(combined_file, brexit)
 
 combined_file %>%
   filter(is.na(HanrettyLeave)) %>%
   select(1:3)
 
-#Add 2021 Census data
+# Add Miori notional 2014 Scot ref results
+
+scotref <- read_csv("data/Indy2014_ConstituencyEstimates.csv")
+
+scotref <- scotref %>%
+  select(-WinDiff) %>%
+  rename(ConstituencyName=Constituency_name,ScotRefYes=Yes_Notional,ScotRefNo=No_Notional)
+
+combined_file <- left_join(combined_file, scotref)
+
+combined_file %>%
+  filter(Country=="Scotland",!is.na(ScotRefYes))
+
+summary(combined_file)
+
+# Add 2021 Census data
 
 c2021_gb <- read_csv("data/census21_wpc_gb.csv")
 
@@ -40,6 +64,6 @@ names(combined_file)
 
 summary(combined_file)[c(7),]
 
-#Write file
+# Write file
 
-write_csv(combined_file, "2024-UK-General-Election-Census-Constituency-Summaries-File-v1.0.csv")
+write_csv(combined_file, "2024-UK-General-Election-Census-Constituency-Summaries-File-v1.1.csv")
