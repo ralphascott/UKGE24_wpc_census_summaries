@@ -22,9 +22,9 @@ The file also integrates:
 
 **Version 1.1**
 
-- Added 2024 results for HoC library file.
+- Added 2024 results from HoC library file.
 - Added Miori ScotRef notionals.
-- Updated ONS codes for some Scottish constituencies, so that these are now based on those in HoC Library file (thanks to David Jeffrey for the heads up on these).
+- Updated ONS codes for some Scottish constituencies, so that these are now based on those in HoC Library file (thanks to David Jeffery for the heads up on these).
 
 **Version 1.0**
 
