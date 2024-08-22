@@ -2,7 +2,7 @@
 
 This repo contains constituency-level Census summaries for all of the 632 new 2024 Westminster Parliamentary Constituencies in Great Britain, as well as the data and replication code used to produce them.
 
-The following file in the root directory is the key output you're probably looking for: 2024-UK-General-Election-Census-Constituency-Summaries-File-v1.1.csv
+The following file in the root directory is the key output you're probably looking for: [2024-UK-General-Election-Census-Constituency-Summaries-File-v1.1.csv]([url](https://github.com/ralphascott/UKGE24_wpc_census_summaries/blob/main/2024-UK-General-Election-Census-Constituency-Summaries-File-v1.1.csv))
 
 Everything else (data and scripts) are the working files so you can adapt for your own purposes in future should you wish to, eg by adding new Census measures.
 
